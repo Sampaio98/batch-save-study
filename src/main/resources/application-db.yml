@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        ddl-auto: update
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+

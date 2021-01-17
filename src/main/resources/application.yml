@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: h2
+  jpa:
+    properties:
+      hibernate:
+        order_inserts: true
+        jdbc:
+          batch_size: 1000
+        generate_statistics: true
