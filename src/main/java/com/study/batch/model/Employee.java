@@ -7,13 +7,11 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.domain.Persistable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -23,7 +21,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "TB_EMPLOYEE")
-public class Employee implements Persistable<UUID> {
+public class Employee {
 
     @Id
     @GeneratedValue(generator = "UUID")
@@ -39,8 +37,5 @@ public class Employee implements Persistable<UUID> {
 
     @UpdateTimestamp
     private LocalDateTime updateDate;
-
-    @Transient
-    private boolean isNew;
 
 }

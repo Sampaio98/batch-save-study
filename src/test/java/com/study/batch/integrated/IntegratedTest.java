@@ -17,7 +17,7 @@ import java.util.Locale;
 
 @SpringBootTest
 public class IntegratedTest {
-    private static final int CHUNK_SIZE = 10000;
+    private static final int CHUNK_SIZE = 10;
 
     @Autowired
     private EmployeeRepository employeeRepository;
@@ -40,7 +40,6 @@ public class IntegratedTest {
             Employee employee = Employee.builder()
                     .name(fullName)
                     .email(StringUtils.uncapitalize(email))
-                    .isNew(true)
                     .build();
 
             employees.add(employee);
