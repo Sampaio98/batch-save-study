@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -39,6 +40,7 @@ public class Employee implements Persistable<UUID> {
     @UpdateTimestamp
     private LocalDateTime updateDate;
 
+    @Transient
     private boolean isNew;
 
 }
