@@ -17,7 +17,7 @@ import java.util.Locale;
 
 @SpringBootTest
 public class IntegratedTest {
-    private static final int CHUNK_SIZE = 10;
+    private static final int CHUNK_SIZE = 10000;
 
     @Autowired
     private EmployeeRepository employeeRepository;
